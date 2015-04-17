@@ -1,4 +1,10 @@
-<h1>This is where your posts will go</h1>
+<h1>Add a new Post</h1>
 
-<%= form_tag do %>
-	<% end %>
+
+	<div class="col-md-7"><!-- this is subject to deletion, as its full potential is unkown -->
+		<% @posts.each do |post| %>
+			<strong>Comments:</strong><br>
+				<%= post.comment %>
+	</div>
+
+		<% end %>
