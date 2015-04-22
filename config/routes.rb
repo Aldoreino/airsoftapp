@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  root 'first_page#index'
+ # get 'users/new' =>
 
-  get 'users/create'
+ # get 'users/create' =>
 
-  root 'posts#index'
 get 'posts' => 'posts#index'
 get 'posts/new' => 'posts#new'
 post 'posts' => 'posts#create'
