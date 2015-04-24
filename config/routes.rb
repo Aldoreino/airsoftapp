@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'first_page#index'
-
+  root 'posts#index'
+  get '/posts' => 'posts#index'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

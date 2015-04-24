@@ -1,0 +1,11 @@
+<form class="form-horizontal">
+	<%= form_for @post do |f| %>
+
+		<div class="form-group">Add a comment: <%= f.text_field :comment %></div>
+
+	<%= f.submit "Submit Post" %>
+
+	<% end %>
+</form>
+
+<%= link_to "Back", posts_path %> 

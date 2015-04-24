@@ -10,9 +10,15 @@ class PostsController < ApplicationController
 	end
 	def new
 		@post = Post.new
+		@post.comment = Comment.new
 	end
 	def create
 		@post = Post.new
+		if @post.save
+			redirect_to posts_path
+		else 
+			render 'new'
+		end
 	end
 	def edit
 		@post = Post.find(params[:id])

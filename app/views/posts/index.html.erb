@@ -1,23 +1,26 @@
-<ul class="nav nav-pills navbar">
-	<li>Home</li><li>About</li>
+<div id="Logo" style="text-align:center">
+	<h1>Air Base</h1>
+<p>Welcome to Air Base! A place for Airsoft Enthusiasts! Already have an account? Go ahead and log in! If not, signing up is fast and simple</p>
+</div>
+<form method="get" action="/login">
+<div class="row" style="text-align:center">
+	<button type="submit" class="btn btn-info">Login</button>
+</div>
+</form>
+<br>
+<form method="get" action="/signup">
+<div class="row" style="text-align:center">
+	<button type="submit" class="btn btn-danger">Signup</button>
+</div>
+</form>
+
+
+
+<ul>
+<% @posts.each do |post| %>
+	<li>
+	<%= post.comment %>
+	<%= link_to "Show Post" posts_path %>
+	</li>
 </ul>
-
-<h1>Add a new Post</h1>
-
-
-
-
-
-
-
-<!-- need to figure out how to put separate comments on a different line -->
-	<strong>Comments:</strong><br><% @posts.each do |post| %>
-		<ul>
-			<%= image_tag post.picture.url if post.picture? %>
-			<li>
-			<%= post.comment %>
-			</li>
-
-		<% end %>
-		<%= link_to "Post Something", posts_new_path %>
-		<%= link_to "Sign Up", users_new_path %>
+<% end %>
