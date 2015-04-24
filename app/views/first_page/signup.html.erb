@@ -3,18 +3,15 @@
 <p>By signing up, you will gain access to the site along with all it's privileges</p>
 </div>
 <div class="row" style="text-align:center">
-	<%= form_for('/signup)', method: :post) do %>
-		<div class="form-group">
-			<p>Please enter your name: <%= text_field_tag :name %></p>
-		</div>
-		<div class="form-group">
-			<p>Please enter your email: <%= text_field_tag :email %></p>
-		</div>
-		<div class="form-group">
-			<p>Please select a password: <%= password_field_tag :password %></p>
-		</div>
-			<%= submit_tag "SignUp" %>
-	<% end %>
+<%= form_for :user, url: '/users' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+
+<% end %>
 </div>
 <br>
 <div class="container-fluid">

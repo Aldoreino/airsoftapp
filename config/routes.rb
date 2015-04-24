@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   root 'first_page#index'
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   get '/login' => 'first_page#login'
-  get '/signup' => 'first_page#signup'
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
  # get 'users/new' =>
 
  # get 'users/create' =>
