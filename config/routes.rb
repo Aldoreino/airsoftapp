@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  get '/login' => 'first_page#login'
+
+     get '/signup' => 'users#new'
+    post '/users' => 'users#create'
+
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
  # get 'users/new' =>

@@ -3,7 +3,7 @@
 <p>Go ahead and sign in!</p>
 </div>
 <div class="row" style="text-align:center">
-	<%= form_tag('/login)', method: :post) do %>
+	<%= form_tag('/login', method: :post) do %>
 		<div class="form-group">
 			<p>Email: <%= text_field_tag :email %></p>
 		</div>
@@ -12,4 +12,19 @@
 		</div>
 			<%= submit_tag "Submit" %>
 	<% end %>
+</div>
+
+<br>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-md-2 col-md-offset-2">
+<%= image_tag("AirsoftGI_Logo_nt.jpg", class: 'img-responsive') %>
+	</div>
+	<div class="col-md-2 col-md-offset-1">
+<%= image_tag("evike_Logo.jpg", class: 'img-responsive') %>
+	</div>
+	<div class="col-md-2 col-md-offset-1">
+<%= image_tag("airsplat_Logo.jpg", class: 'img-responsive') %>
+	</div>
+</div>
 </div>

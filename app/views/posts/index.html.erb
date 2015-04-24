@@ -1,7 +1,6 @@
-<div id="Logo" style="text-align:center">
+<div id="Logo" style="text-align:center" class="nav nav-tabs">
 	<h1>Air Base</h1>
-<p>Welcome to Air Base! A place for Airsoft Enthusiasts! Already have an account? Go ahead and log in! If not, signing up is fast and simple</p>
-</div>
+<p>Welcome to Air Base! A place for Airsoft Enthusiasts!<br> Already have an account? Go ahead and log in! If not, signing up is fast and simple</p>
 
 <form method="get" action="/login">
 <div class="row" style="text-align:center">
@@ -14,6 +13,7 @@
 	<button type="submit" class="btn btn-danger">Signup</button>
 </div>
 </form>
+</div>
 
 
 
@@ -22,7 +22,8 @@
 <% @posts.each do |post| %>
 	<li>
 	<%= post.comment %>
-	<strong><%= link_to "Show Post", posts_path %></strong>
+	<%= post.class %>
+	<strong><%= link_to "Show Post", post_path([post.id]) %></strong>
 	</li>
 </ul>
 <% end %>
