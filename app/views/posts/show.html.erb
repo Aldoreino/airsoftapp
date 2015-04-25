@@ -1,3 +1,21 @@
-<h1></h1>
-
-<%= @post.comment %>
+<div class="container">
+	<div class="page-header">
+		<h1 class="signin"><%= @post.title %></h1>
+		<p class="sign in nright"><%= @post.date_published %></p>
+	</div>
+	<p class="bg-info"><h3 class="signin"><%= @post.body %></h3></p>
+	<% @comments.each do | comment | %>
+		<div class="panel panel-default">
+	  		<div class="panel-body">
+		  		<%= comment.body %>
+		  		<br>
+				<% if comment.user%>
+					<strong>Posted by:</strong><%= comment.user.name %>
+				<%else%>
+					<strong>Posted by: </strong>Anonymous
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+	<%= render 'posts/comment_form' %>
+</div>

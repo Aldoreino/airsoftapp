@@ -1,0 +1,16 @@
+<%= form_for([@post, @comment]) do  | f |%>
+		<div class="form-group">
+			<p><%= f.label :body, 'Write a comment' %></p>
+			<p><%= f.text_area :body, class: 'form-control'%></p>
+			<% if current_user %>
+				<p><%= f.hidden_field :user_id, value: current_user.id%></p>
+			<%else%>
+				<p><%= f.hidden_field :user_id, value: nil %></p>
+			<%end%>
+		</div>
+		<div class="row">
+		<div class="col-md-2 col-md-offset-5">
+		<%=  f.submit "Post Comment", class: "btn btn-lg" %>
+		</div>
+		</div>
+	<%end%>
