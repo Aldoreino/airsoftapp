@@ -21,8 +21,9 @@
 <ul>
 <% @posts.each do |post| %>
 	<li>
-	<%= post.comment %>
-	<%= post.class %>
+	<div style="">Title:<%= post.title %></div>
+
+	<div style="">Body:<%= post.body %></div>
 	<strong><%= link_to "Show Post", post_path([post.id]) %></strong>
 	</li>
 </ul>

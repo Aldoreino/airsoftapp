@@ -14,7 +14,7 @@ Rails.application.routes.draw do
  # get 'users/new' =>
 
  # get 'users/create' =>
-
+    resources :comments, only: :create
 #get 'posts' => 'posts#index'
 #get 'posts/new' => 'posts#new'
 #post 'posts' => 'posts#create'

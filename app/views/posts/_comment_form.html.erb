@@ -1,4 +1,4 @@
-<%= form_for([@post, @comment]) do  | f |%>
+<%= form_for([@post, @comment]) do  |f|%>
 		<div class="form-group">
 			<p><%= f.label :body, 'Write a comment' %></p>
 			<p><%= f.text_area :body, class: 'form-control'%></p>

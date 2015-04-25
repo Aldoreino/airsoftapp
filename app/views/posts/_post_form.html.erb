@@ -1,0 +1,13 @@
+<%= form_for @post do | f | %>
+	<ul class="list-unstyled">
+		<div class="form-group">
+			<li><%= f.label :title %></li>
+			<li><%= f.text_field :title , class: "form-control" %></li>
+		</div>
+		<div class="form-group">
+			<li><%= f.label :body, 'Description' %></li>
+			<li><%= f.text_area :body , class: "form-control" %></li>
+		</div>
+		<li><%= f.submit "Create Post" , class: " btn btn-default btn-lg" %></li>
+	</ul>
+<%end%>
