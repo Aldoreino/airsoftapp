@@ -2,22 +2,32 @@
 	<h1>Air Base</h1>
 <p>Welcome to Air Base! A place for Airsoft Enthusiasts!<br> Already have an account? Go ahead and log in! If not, signing up is fast and simple</p>
 
+<div class="col-md-2 col-md-offset-8">
 <form method="get" action="/login">
 <div class="row" style="text-align:center">
 	<button type="submit" class="btn btn-info">Login</button>
 </div>
 </form>
 <br>
+
 <form method="get" action="/signup">
 <div class="row" style="text-align:center">
 	<button type="submit" class="btn btn-danger">Signup</button>
 </div>
 </form>
 </div>
+<br>
+</div>
+
+<div style="text-align:center">
+	<%= link_to "New Post", new_post_path , class: "btn btn-default btn-lg"%>
+</div>
+<br>
+<br>
+<br>
 
 
-
-
+<div style="text-align:center">
 <ul>
 <% @posts.each do |post| %>
 	<li>
@@ -28,3 +38,4 @@
 	</li>
 </ul>
 <% end %>
+</div>
